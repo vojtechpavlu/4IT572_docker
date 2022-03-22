@@ -1,0 +1,14 @@
+name: 'Build and test our Eshop'
+on:
+  workflow_dispatch:
+  push
+
+jobs:
+  Install:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.WORKFLOW_TOKEN }}
